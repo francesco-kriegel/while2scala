@@ -1,0 +1,45 @@
+DEF xi:=0 BY
+    xi:=xj+0
+YB
+
+DEF xi:=1 BY
+    xi:=xj+1
+YB
+
+DEF xi:=xj+xk BY
+    xi:=xj+0;
+    LOOP xk DO
+        xi:=xi+1
+    END
+YB
+
+DEF xi:=xj-xk BY
+    xi:=xj+0;
+    LOOP xk DO
+        xi:=xi-1
+    END
+YB
+
+DEF xi:=xj*xk BY
+    xi:=0;
+    LOOP xk DO
+        xi:=xi+xj
+    END
+YB
+
+DEF xi:=xj/xk BY
+    xi:=0
+YB
+
+DEF IF xi!=0 THEN <P> END BY
+    LOOP xi DO xj:=1 END;
+    LOOP xj DO <P> END
+YB
+
+x0:=x1*x2;
+x0:=x0-2;
+
+x3:=x4*x5;
+x3:=x3-2
+
+IF x0!=0 THEN x0:=0 END

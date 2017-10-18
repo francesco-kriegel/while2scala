@@ -1,0 +1,14 @@
+DEF xi:=1 BY
+    xi:=xj+1
+YB
+
+DEF IF xi!=0 THEN {P} END BY
+    LOOP xi DO xj:=1 END;
+    LOOP xj DO {P} END
+YB
+
+IF x0!=0 THEN {x0:=x1+0} END
+;
+WHILE x1!=0 DO
+  x1:=x1-1
+END
